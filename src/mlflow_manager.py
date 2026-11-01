@@ -12,16 +12,29 @@ from datetime import datetime
 import mlflow
 from mlflow.entities import Metric
 
-from .config import (
-    MLFLOW_EXPERIMENT_NAME,
-    MLFLOW_TRACKING_URI,
-    MLFLOW_ARTIFACT_ROOT,
-    PROMPTS,
-    ACADEMIC_QUESTIONS,
-    MODEL_NAME
-)
-from .latency import LLMAPIClient, LatencyRecord
-from .cost import TokenCounter, CostCalculator, TokenUsage, CostCalculation
+# Handle both package imports (src.*) and direct imports (*)
+try:
+    from src.config import (
+        MLFLOW_EXPERIMENT_NAME,
+        MLFLOW_TRACKING_URI,
+        MLFLOW_ARTIFACT_ROOT,
+        PROMPTS,
+        ACADEMIC_QUESTIONS,
+        MODEL_NAME
+    )
+    from src.latency import LLMAPIClient, LatencyRecord
+    from src.cost import TokenCounter, CostCalculator, TokenUsage, CostCalculation
+except ImportError:
+    from config import (
+        MLFLOW_EXPERIMENT_NAME,
+        MLFLOW_TRACKING_URI,
+        MLFLOW_ARTIFACT_ROOT,
+        PROMPTS,
+        ACADEMIC_QUESTIONS,
+        MODEL_NAME
+    )
+    from latency import LLMAPIClient, LatencyRecord
+    from cost import TokenCounter, CostCalculator, TokenUsage, CostCalculation
 
 
 class PromptRegistry:

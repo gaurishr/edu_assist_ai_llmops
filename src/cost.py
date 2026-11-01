@@ -8,7 +8,11 @@ from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from openai import OpenAI
 
-from .config import MODEL_PRICING, MODEL_NAME, CURRENCY
+# Handle both package imports (src.config) and direct imports (config)
+try:
+    from src.config import MODEL_PRICING, MODEL_NAME, CURRENCY
+except ImportError:
+    from config import MODEL_PRICING, MODEL_NAME, CURRENCY
 
 
 @dataclass

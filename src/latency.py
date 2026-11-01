@@ -12,12 +12,21 @@ from dataclasses import dataclass, asdict
 import requests
 from openai import OpenAI
 
-from .config import (
-    OPENAI_API_KEY, 
-    MODEL_NAME, 
-    ACADEMIC_QUESTIONS,
-    PROMPTS
-)
+# Handle both package imports (src.config) and direct imports (config)
+try:
+    from src.config import (
+        OPENAI_API_KEY, 
+        MODEL_NAME, 
+        ACADEMIC_QUESTIONS,
+        PROMPTS
+    )
+except ImportError:
+    from config import (
+        OPENAI_API_KEY, 
+        MODEL_NAME, 
+        ACADEMIC_QUESTIONS,
+        PROMPTS
+    )
 
 
 @dataclass
