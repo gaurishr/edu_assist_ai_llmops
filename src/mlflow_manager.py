@@ -45,7 +45,8 @@ class PromptRegistry:
         if MLFLOW_TRACKING_URI:
             mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
         
-        mlflow.set_artifact_root(MLFLOW_ARTIFACT_ROOT)
+        # Note: mlflow.set_artifact_root() doesn't exist in MLflow 3.x
+        # Artifact location is set when creating the experiment instead
         
         # Create or get experiment
         experiment = mlflow.get_experiment_by_name(MLFLOW_EXPERIMENT_NAME)

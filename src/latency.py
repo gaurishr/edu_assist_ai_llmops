@@ -205,7 +205,16 @@ class LatencyAnalyzer:
         import statistics
         
         if not latencies:
-            return {}
+            # Return default stats with 0 or None for empty list
+            return {
+                "count": 0,
+                "mean_seconds": 0.0,
+                "median_seconds": 0.0,
+                "min_seconds": 0.0,
+                "max_seconds": 0.0,
+                "stdev_seconds": 0.0,
+                "note": "No successful API calls available for statistics"
+            }
         
         sorted_latencies = sorted(latencies)
         
