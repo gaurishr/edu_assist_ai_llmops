@@ -31,12 +31,15 @@ check_command() {
 
 # Function to check Python package
 check_package() {
-    if python3 -c "import $1" 2>/dev/null; then
-        version=$(python3 -c "import $1; print(getattr($1, '__version__', 'unknown'))" 2>/dev/null)
-        echo -e "${GREEN}✓${NC} $1 ($version)"
+    local pkg_name="$1"
+    local import_name="${2:-$1}"  # Use different import name if provided
+    
+    if python3 -c "import $import_name" 2>/dev/null; then
+        version=$(python3 -c "import $import_name; print(getattr($import_name, '__version__', 'unknown'))" 2>/dev/null)
+        echo -e "${GREEN}✓${NC} $pkg_name ($version)"
         ((PASSED++))
     else
-        echo -e "${RED}✗${NC} $1 - NOT INSTALLED"
+        echo -e "${RED}✗${NC} $pkg_name - NOT INSTALLED"
         ((FAILED++))
     fi
 }
@@ -92,11 +95,14 @@ fi
 echo ""
 echo "4. Required Python Packages"
 echo "----------------------------------------"
-PACKAGES=("pandas" "numpy" "openai" "mlflow" "jupyter" "requests" "python_dotenv" "jsonschema")
-
-for package in "${PACKAGES[@]}"; do
-    check_package "$package"
-done
+check_package "pandas" "pandas"
+check_package "numpy" "numpy"
+check_package "openai" "openai"
+check_package "mlflow" "mlflow"
+check_package "jupyter" "jupyter"
+check_package "requests" "requests"
+check_package "python-dotenv" "dotenv"
+check_package "jsonschema" "jsonschema"
 
 echo ""
 echo "5. Project Files"

@@ -1,296 +1,143 @@
-# 🚀 START HERE - MLOps Assignment 2
+# Getting Started with the MLOps Assignment 2
 
-Welcome! This guide will help you get started with the LLMOps assignment quickly.
+Welcome! This guide will help you get up and running with the LLMOps assignment. We've tried to make it as simple as possible, so you can focus on learning rather than troubleshooting setup issues.
 
----
+## Your First Time? Start Here
 
-## For First-Time Users: Complete Setup
+Getting everything set up takes just a few minutes. We've automated most of the heavy lifting for you.
 
-### Step 1: Run Setup Script
+### Step 1: Run the Setup Script
+
+The first thing you'll do is run a setup script. This might sound complicated, but it's really just one command:
 
 ```bash
 bash setup.sh
 ```
 
-This script will:
+This script is smart enough to figure out what operating system you're using (whether you're on a Mac or Rocky Linux), and it will do all the work from there. It creates a Python virtual environment, downloads and installs all the packages you need, sets up your project folders, and gets your configuration file ready.
 
-- ✓ Detect your operating system (macOS or Rocky Linux)
-- ✓ Create a Python virtual environment
-- ✓ Install all dependencies automatically
-- ✓ Create necessary directories
-- ✓ Set up your .env configuration file
+The script will also talk to you as it goes, letting you know what it's doing and whether anything goes wrong. If you've already run this once and you're running it again, it'll ask you before overwriting anything important.
 
-### Step 2: Configure API Key
+### Step 2: Add Your OpenAI API Key
+
+After the setup script finishes, you need to add your API key. This is what lets you use the OpenAI API. Open your configuration file in a text editor:
 
 ```bash
-# Edit .env and add your OpenAI API key
 nano .env
 ```
 
-Add your key like this:
+Then add your key. It should look something like this:
 
 ```
-OPENAI_API_KEY=sk-your-actual-key-here
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxx
 ```
 
-[Need help getting an API key?](OPENAI_API_KEY_SETUP.md)
+Don't have a key yet? Read OPENAI_API_KEY_SETUP.md. It walks you through creating an account, generating your key, and managing your costs.
 
-### Step 3: Verify Setup
+### Step 3: Verify Your Setup
+
+Before you start working, it's a good idea to verify that everything installed correctly. We have a verification script that checks 20 different things:
 
 ```bash
 bash verify_setup.sh
 ```
 
-This checks:
+This checks that your Python version is compatible, all the packages are installed, your configuration file is set up correctly, and all the project files are where they should be. If anything's missing, it'll tell you exactly what needs to be fixed.
 
-- ✓ All required packages installed
-- ✓ Python version compatible
-- ✓ .env file properly configured
-- ✓ All project files present
+### Step 4: Activate Your Environment and Run the Project
 
-### Step 4: Run the Notebook
+Now you're ready to go. First activate your environment:
+
+```bash
+bash activate.sh
+```
+
+Then fire up the Jupyter notebook:
+
+```bash
+jupyter notebook llmops_assignment.ipynb
+```
+
+Your browser will open, and you'll see the notebook with all 20 cells ready to run. Just start with the first cell and work your way through them in order.
+
+## If You're Coming Back Later
+
+If you've already done the setup and you're just coming back to work on the project again, you can skip the setup step. Just do this:
 
 ```bash
 bash activate.sh
 jupyter notebook llmops_assignment.ipynb
 ```
 
----
+That's it. The activation script will remind you of what you can do and what comes next.
 
-## For Returning Users: Quick Start
+## What's This Assignment Actually About?
 
-```bash
-# 1. Activate environment
-bash activate.sh
+The assignment has three parts that work together:
 
-# 2. Run notebook
-jupyter notebook llmops_assignment.ipynb
+**First, you'll measure how fast the API responds.** You'll call GPT-3.5 with different versions of prompts and track how long each request takes. This helps you understand the performance of different approaches.
 
-# 3. (Optional) View MLflow results
-mlflow ui --port 5000
-```
+**Second, you'll calculate costs.** You'll count how many tokens each prompt uses and figure out what it would cost to run these prompts at scale. API costs add up quickly, so this is important stuff.
 
----
+**Third, you'll experiment with MLflow.** You'll register different prompt versions, run experiments on them, and compare their performance. This is where you figure out which version actually works best.
 
-## Integration of Setup & Activate Scripts
+All three parts connect together in the notebook, so doing them in order makes sense. By the end, you'll have measurements, cost projections, and experiment data showing which prompt version performs best.
 
-The **setup.sh** and **activate.sh** scripts work together:
+## What Will You Have When You're Done?
 
-```
-setup.sh (one time)
-    ↓
-    └─→ Creates venv
-    └─→ Installs dependencies
-    └─→ Sets up .env
-    └─→ Creates directories
+After you run the notebook, you'll have several things:
 
-    ↓
-  
-activate.sh (every session)
-    └─→ Activates virtual environment
-    └─→ Shows available commands
-    └─→ Checks .env configuration
-```
+- A CSV file with latency measurements showing how fast each prompt version responded
+- Another CSV with cost calculations and token usage data
+- MLflow experiment data that you can explore visually
+- Screenshots showing the experiments and results
 
-### Smart Platform Detection
+All of this is what you'll need to submit with your assignment, and we've set it up so the notebook creates all of this automatically.
 
-- **Linux/Rocky**: Uses `requirements-rocky-linux.txt`
-- **macOS**: Uses `requirements.txt`
+## Something Not Working? We Can Help
 
----
-
-## Key Features
-
-### 📊 Three Integrated Tasks
-
-1. **Latency Measurement** - Measure API response times
-2. **Cost Analysis** - Calculate token usage and costs
-3. **MLflow Tracking** - Manage and compare prompt versions
-
-### 🛠️ Automated Scripts
-
-- **setup.sh** - One-time environment setup
-- **activate.sh** - Activate environment with helpful tips
-- **verify_setup.sh** - Check installation is correct
-
-### 📚 Comprehensive Docs
-
-- **QUICK_START.md** - Fast reference guide
-- **ROCKY_LINUX_SETUP.md** - Detailed Linux setup
-- **README.md** - Full documentation
-- **DELIVERABLES.md** - Expected outputs
-
----
-
-## File Structure
-
-```
-edu_assist_ai_llmops/
-├── setup.sh                         ← Run first (one time)
-├── activate.sh                      ← Run each session
-├── verify_setup.sh                  ← Check setup status
-│
-├── START_HERE.md                    ← You are here
-├── QUICK_START.md                   ← Quick reference
-├── ROCKY_LINUX_SETUP.md             ← Linux detailed guide
-├── OPENAI_API_KEY_SETUP.md          ← API key help
-├── README.md                        ← Full docs
-├── DELIVERABLES.md                  ← Expected outputs
-│
-├── llmops_assignment.ipynb          ← Main notebook (run this!)
-├── requirements.txt                 ← Dependencies (macOS)
-├── requirements-rocky-linux.txt     ← Dependencies (Linux)
-├── .env.example                     ← Configuration template
-├── .env                             ← Your config (after setup)
-│
-├── src/                             ← Python modules
-│   ├── config.py                    ← Configuration hub
-│   ├── latency.py                   ← Task 1: Latency
-│   ├── cost.py                      ← Task 2: Cost
-│   └── mlflow_manager.py            ← Task 3: MLflow
-│
-├── data/                            ← Test questions
-├── outputs/                         ← Generated CSV files
-├── screenshots/                     ← MLflow screenshots
-└── mlruns/                          ← MLflow experiment data
-```
-
----
-
-## Typical Workflow
-
-### First Time
+We built in a system to help you figure out what went wrong. If something doesn't seem right, just run the verification script:
 
 ```bash
-# 1. Clone/download project
-cd ~/Learnings/Assignments/MLOPS/edu_assist_ai_llmops
+bash verify_setup.sh
+```
 
-# 2. Run integrated setup (creates venv, installs deps)
+It will check everything and tell you exactly what's missing or broken. The output is designed to be helpful, not just show you an error message.
+
+If you need more detailed help, we have documentation for pretty much every scenario. Quick command reference, detailed setup guides for different operating systems, help with API keys, complete documentation - it's all there.
+
+## Getting Around the Documentation
+
+Here's where to go depending on what you need:
+
+- **New to this and not sure where to start?** This guide (START_HERE.md) is what you're reading
+- **Want just the commands without all the explanation?** Check out QUICK_START.md
+- **Setting this up on Rocky Linux?** See ROCKY_LINUX_SETUP.md
+- **Need help with your API key?** Read OPENAI_API_KEY_SETUP.md
+
+## Your Next Move
+
+Just pick the command that matches where you are:
+
+If this is your first time:
+```bash
 bash setup.sh
-
-# 3. Configure API key
-nano .env
-
-# 4. Verify everything works
-bash verify_setup.sh
-
-# 5. Activate and run
-bash activate.sh
-jupyter notebook llmops_assignment.ipynb
 ```
 
-### Subsequent Times
-
+If you've already set up and you're coming back:
 ```bash
-# Just activate and run
 bash activate.sh
 jupyter notebook llmops_assignment.ipynb
 ```
 
----
+If you want to check that everything's installed:
+```bash
+bash verify_setup.sh
+```
 
-## Jupyter Notebook Overview
-
-The notebook has 20 cells covering 3 tasks:
-
-| Cells | Task              | Description                                      |
-| ----- | ----------------- | ------------------------------------------------ |
-| 1-7   | **Latency** | Measure API response times for 3 prompt versions |
-| 8-11  | **Cost**    | Calculate tokens and project monthly costs       |
-| 12-18 | **MLflow**  | Track experiments and compare versions           |
-| 19-20 | **Summary** | Results and conclusions                          |
-
-**Run cells sequentially (1 → 20)**
-
----
-
-## Expected Outputs
-
-After running the notebook:
-
-| File                                      | Description                     |
-| ----------------------------------------- | ------------------------------- |
-| `outputs/latency_tokens_cost.csv`       | Raw measurements                |
-| `outputs/prompt_evaluation_results.csv` | MLflow evaluation results       |
-| `mlruns/`                               | MLflow experiment tracking data |
-
-View MLflow results:
-
+If you want to see the MLflow results:
 ```bash
 mlflow ui --port 5000
-# Open: http://localhost:5000
 ```
 
----
-
-## Common Issues & Solutions
-
-| Issue                            | Solution                              |
-| -------------------------------- | ------------------------------------- |
-| `ModuleNotFoundError: pandas`  | Run: `bash activate.sh`             |
-| `venv not found`               | Run: `bash setup.sh`                |
-| `OPENAI_API_KEY not found`     | Edit `.env` with your key           |
-| `Port 8888 in use`             | Run: `jupyter notebook --port 8889` |
-| `Permission denied` on scripts | Run: `chmod +x *.sh`                |
-
----
-
-## Platform-Specific Notes
-
-### macOS
-
-- Uses `requirements.txt` (pre-built wheels, faster)
-- Python 3.14 available through Homebrew
-- Virtual environment is platform-specific
-
-### Rocky Linux 9.5
-
-- Uses `requirements-rocky-linux.txt` (compatible versions)
-- Requires system packages: `sudo dnf install -y python3 python3-pip python3-venv gcc`
-- See [ROCKY_LINUX_SETUP.md](ROCKY_LINUX_SETUP.md) for details
-
----
-
-## Getting Help
-
-1. **Quick questions?** → [QUICK_START.md](QUICK_START.md)
-2. **Linux setup help?** → [ROCKY_LINUX_SETUP.md](ROCKY_LINUX_SETUP.md)
-3. **API key issues?** → [OPENAI_API_KEY_SETUP.md](OPENAI_API_KEY_SETUP.md)
-4. **Full documentation?** → [README.md](README.md)
-5. **What to deliver?** → [DELIVERABLES.md](DELIVERABLES.md)
-
----
-
-## Quick Command Reference
-
-```bash
-# Setup (one time)
-bash setup.sh
-
-# Activate (every session)
-bash activate.sh
-
-# Verify installation
-bash verify_setup.sh
-
-# Run notebook
-jupyter notebook llmops_assignment.ipynb
-
-# View MLflow
-mlflow ui --port 5000
-
-# Check installed packages
-pip list
-
-# Deactivate virtual environment
-deactivate
-```
-
----
-
-## Next Steps
-
-✅ **1. Run setup:** `bash setup.sh`
-✅ **2. Configure API:** Edit `.env`
-✅ **3. Verify setup:** `bash verify_setup.sh`
-✅ **4. Start notebook:** `bash activate.sh && jupyter notebook llmops_assignment.ipynb`
+Take it one step at a time. You'll be up and running faster than you think!
