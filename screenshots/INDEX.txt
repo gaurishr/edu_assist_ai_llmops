@@ -1,0 +1,173 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    SCREENSHOT COMPLETE INDEX                              ║
+║           MLOps Assignment 2 - All Visualizations Available                ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+COMPLETE PACKAGE: 11 Screenshots + Documentation
+TOTAL SIZE: 1.7 MB (High Resolution 300 DPI PNG)
+STATUS: ✓ Ready for Assignment Submission
+
+═══════════════════════════════════════════════════════════════════════════════
+
+PART 1: DATA ANALYSIS & PERFORMANCE METRICS (5 files)
+══════════════════════════════════════════════════════
+
+01_latency_comparison.png (87 KB)
+   Description: API Response Time Comparison Chart
+   Shows: Latency for v1_basic, v2, v3
+   Key Data: v3 fastest (0.342s), v1_basic slowest (0.430s)
+   Task: Task 1 - Latency Measurement
+
+02_cost_comparison.png (94 KB)
+   Description: API Cost per Call Bar Chart
+   Shows: Cost comparison for each prompt version
+   Key Data: v1_basic cheapest ($0.000009), v3 most expensive
+   Task: Task 2 - Cost Calculation
+
+03_token_usage.png (104 KB)
+   Description: Token Consumption (Input & Output)
+   Shows: Dual bar charts for token usage
+   Key Data: v1 minimal tokens, v3 highest
+   Task: Task 2 - Cost Calculation
+
+04_performance_summary.png (121 KB)
+   Description: Comprehensive Metrics Table
+   Shows: All metrics in single table format
+   Includes: Latency, tokens, cost, JSON validation rates
+   Task: Task 2 - Cost Summary
+
+05_recommendation.png (118 KB)
+   Description: Production Recommendation Banner
+   Shows: v1_basic recommended for production
+   Key Data: Best cost-performance balance
+   Task: Task 2 - Conclusions
+
+═══════════════════════════════════════════════════════════════════════════════
+
+PART 2: MLFLOW EXPERIMENT TRACKING (6 files)
+═════════════════════════════════════════════
+
+06_mlflow_experiment_overview.png (160 KB)
+   Description: MLflow Experiment Dashboard
+   Shows: Main experiment "eduassist_llmops_assignment"
+   Content: 3 runs with metrics and parameters
+   Task: Task 3 - MLflow Experiment Setup
+
+07_prompt_registry.png (163 KB)
+   Description: Prompt Version Registry
+   Shows: 3 registered prompt versions:
+           - v1_basic (Production)
+           - v2_structured (Staging)
+           - v3_enhanced (Archived)
+   Task: Task 3 - Prompt Versioning
+
+08_metrics_comparison.png (217 KB)
+   Description: MLflow Metrics Comparison Grid
+   Shows: 4-panel visualization of metrics
+   Compares: Latency, cost, tokens across runs
+   Task: Task 3 - Metrics Analysis
+
+09_prompt_diff.png (239 KB)
+   Description: Prompt Template Comparison
+   Shows: Side-by-side prompt templates
+   Details: Exact differences between versions
+   Task: Task 3 - Prompt Diff Analysis
+
+10_production_alias.png (200 KB)
+   Description: Production Deployment Configuration
+   Shows: Active production model details
+   Details: v1_basic v1.0 in Production stage
+   Task: Task 3 - Production Deployment
+
+11_mlflow_config.png (190 KB)
+   Description: MLflow Configuration Details
+   Shows: Tracking URI, backend store, artifact store
+   Server: http://localhost:5000
+   Task: Task 3 - MLflow Configuration
+
+═══════════════════════════════════════════════════════════════════════════════
+
+SUPPORTING DOCUMENTATION
+════════════════════════
+
+README.md - Guide to data analysis screenshots
+MLFLOW_SCREENSHOTS.md - Guide to MLflow screenshots
+INDEX.txt - This file
+
+═══════════════════════════════════════════════════════════════════════════════
+
+HOW TO USE THIS PACKAGE
+
+For Assignment Submission:
+  1. Include all 11 PNG files
+  2. Include supporting CSV data files
+  3. Include mlflow.db and mlruns/ folder
+  4. Include this INDEX file
+
+For Presentation:
+  1. Use 01-05 for Task 1 and 2 discussion
+  2. Use 06-11 for Task 3 discussion
+  3. Reference specific screenshots in your report
+
+For Understanding MLOps:
+  1. Screenshots show complete MLOps workflow
+  2. From measurement to production deployment
+  3. Real MLflow experiment tracking
+  4. Production-ready model management
+
+═══════════════════════════════════════════════════════════════════════════════
+
+QUICK REFERENCE
+
+Task 1 Evidence: Screenshot 01
+Task 2 Evidence: Screenshots 02-05
+Task 3 Evidence: Screenshots 06-11
+
+Best Performer: v1_basic (Screenshots 05, 10)
+Experiment Tracking: Screenshots 06, 08
+Prompt Comparison: Screenshots 07, 09
+Configuration: Screenshots 11
+
+═══════════════════════════════════════════════════════════════════════════════
+
+FILE CHECKLIST
+
+Data Analysis Screenshots:
+  ✓ 01_latency_comparison.png
+  ✓ 02_cost_comparison.png
+  ✓ 03_token_usage.png
+  ✓ 04_performance_summary.png
+  ✓ 05_recommendation.png
+
+MLflow Screenshots:
+  ✓ 06_mlflow_experiment_overview.png
+  ✓ 07_prompt_registry.png
+  ✓ 08_metrics_comparison.png
+  ✓ 09_prompt_diff.png
+  ✓ 10_production_alias.png
+  ✓ 11_mlflow_config.png
+
+Documentation:
+  ✓ README.md
+  ✓ MLFLOW_SCREENSHOTS.md
+  ✓ INDEX.txt (this file)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✓ ALL FILES PRESENT AND READY FOR SUBMISSION
+
+Location: ~/Learnings/Assignments/MLOPS/edu_assist_ai_llmops/screenshots/
+
+Total: 11 PNG images + 3 documentation files
+Size: 1.7 MB
+Quality: 300 DPI (Print Quality)
+Format: PNG (Lossless)
+Status: ✓ Complete and Ready
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Contact/Help: Reference the documentation files for details on each screenshot.
+
+✓ SCREENSHOTS COMPLETE - READY FOR ASSIGNMENT SUBMISSION ✓
+
+═══════════════════════════════════════════════════════════════════════════════

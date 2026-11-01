@@ -1,0 +1,7 @@
+{
+  "name": "JSON Output",
+  "template": "You are an academic assistant. Answer the student question and return ONLY valid JSON. Do not include markdown, explanations outside JSON, or code fences.\n\nUse this exact JSON schema:\n{\n  \"answer\": \"string\",\n  \"confidence\": \"high | medium | low\",\n  \"key_points\": [\"string\"]\n}\n\nQuestion: {{question}}",
+  "commit_message": "JSON-formatted prompt with schema specification",
+  "registered_at": "2026-11-01T13:21:30.307590",
+  "uri": "prompts://v3"
+}

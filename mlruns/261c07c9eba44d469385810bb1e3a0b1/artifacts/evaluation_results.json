@@ -1,0 +1,102 @@
+{
+  "version": "v3",
+  "results": {
+    "version": "v3",
+    "questions_tested": 5,
+    "latencies": [
+      0.3255891799926758,
+      0.340134859085083,
+      0.37357115745544434,
+      0.32514262199401855,
+      0.3442509174346924
+    ],
+    "token_usage": [
+      {
+        "input_tokens": 54,
+        "output_tokens": 0,
+        "total_tokens": 54
+      },
+      {
+        "input_tokens": 49,
+        "output_tokens": 0,
+        "total_tokens": 49
+      },
+      {
+        "input_tokens": 55,
+        "output_tokens": 0,
+        "total_tokens": 55
+      },
+      {
+        "input_tokens": 52,
+        "output_tokens": 0,
+        "total_tokens": 52
+      },
+      {
+        "input_tokens": 52,
+        "output_tokens": 0,
+        "total_tokens": 52
+      }
+    ],
+    "costs": [
+      {
+        "input_cost": 2.7e-05,
+        "output_cost": 0.0,
+        "total_cost": 2.7e-05
+      },
+      {
+        "input_cost": 2.45e-05,
+        "output_cost": 0.0,
+        "total_cost": 2.45e-05
+      },
+      {
+        "input_cost": 2.75e-05,
+        "output_cost": 0.0,
+        "total_cost": 2.75e-05
+      },
+      {
+        "input_cost": 2.6e-05,
+        "output_cost": 0.0,
+        "total_cost": 2.6e-05
+      },
+      {
+        "input_cost": 2.6e-05,
+        "output_cost": 0.0,
+        "total_cost": 2.6e-05
+      }
+    ],
+    "responses": [
+      {
+        "question_id": "q1",
+        "response": null,
+        "status": "error",
+        "error": "Error code: 404 - The model `gpt-3.5-turbo` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
+      },
+      {
+        "question_id": "q2",
+        "response": null,
+        "status": "error",
+        "error": "Error code: 404 - The model `gpt-3.5-turbo` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
+      },
+      {
+        "question_id": "q3",
+        "response": null,
+        "status": "error",
+        "error": "Error code: 404 - The model `gpt-3.5-turbo` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
+      },
+      {
+        "question_id": "q4",
+        "response": null,
+        "status": "error",
+        "error": "Error code: 404 - The model `gpt-3.5-turbo` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
+      },
+      {
+        "question_id": "q5",
+        "response": null,
+        "status": "error",
+        "error": "Error code: 404 - The model `gpt-3.5-turbo` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
+      }
+    ],
+    "json_valid_count": 0,
+    "timestamp": "2026-11-01T13:21:58.062825"
+  }
+}

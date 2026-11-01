@@ -1,0 +1,7 @@
+{
+  "name": "Basic",
+  "template": "Answer the following student question clearly.\nQuestion: {{question}}",
+  "commit_message": "Initial basic prompt for academic QA",
+  "registered_at": "2026-11-01T13:21:30.307575",
+  "uri": "prompts://v1"
+}
