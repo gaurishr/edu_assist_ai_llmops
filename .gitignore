@@ -32,15 +32,16 @@ env/
 *.swo
 *~
 
-# Jupyter
+# Jupyter checkpoints (but include notebook files)
 .ipynb_checkpoints/
-*.ipynb
 
 # Data
-*.csv
 *.parquet
 data/
 results/
+
+# CSV files in data dir, but allow output CSVs
+/data/*.csv
 
 # OS
 .DS_Store
