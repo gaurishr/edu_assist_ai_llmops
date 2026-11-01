@@ -1,67 +1,67 @@
 {
-  "version": "v3",
+  "version": "v1",
   "results": {
-    "version": "v3",
+    "version": "v1",
     "questions_tested": 5,
     "latencies": [
-      0.3255891799926758,
-      0.340134859085083,
-      0.37357115745544434,
-      0.32514262199401855,
-      0.3442509174346924
+      0.4801363945007324,
+      0.27730250358581543,
+      0.32573890686035156,
+      0.32105231285095215,
+      0.2754192352294922
     ],
     "token_usage": [
       {
-        "input_tokens": 54,
+        "input_tokens": 19,
         "output_tokens": 0,
-        "total_tokens": 54
+        "total_tokens": 19
       },
       {
-        "input_tokens": 49,
+        "input_tokens": 14,
         "output_tokens": 0,
-        "total_tokens": 49
+        "total_tokens": 14
       },
       {
-        "input_tokens": 55,
+        "input_tokens": 20,
         "output_tokens": 0,
-        "total_tokens": 55
+        "total_tokens": 20
       },
       {
-        "input_tokens": 52,
+        "input_tokens": 17,
         "output_tokens": 0,
-        "total_tokens": 52
+        "total_tokens": 17
       },
       {
-        "input_tokens": 52,
+        "input_tokens": 17,
         "output_tokens": 0,
-        "total_tokens": 52
+        "total_tokens": 17
       }
     ],
     "costs": [
       {
-        "input_cost": 2.7e-05,
+        "input_cost": 9.5e-06,
         "output_cost": 0.0,
-        "total_cost": 2.7e-05
+        "total_cost": 9.5e-06
       },
       {
-        "input_cost": 2.45e-05,
+        "input_cost": 7e-06,
         "output_cost": 0.0,
-        "total_cost": 2.45e-05
+        "total_cost": 7e-06
       },
       {
-        "input_cost": 2.75e-05,
+        "input_cost": 1e-05,
         "output_cost": 0.0,
-        "total_cost": 2.75e-05
+        "total_cost": 1e-05
       },
       {
-        "input_cost": 2.6e-05,
+        "input_cost": 8.5e-06,
         "output_cost": 0.0,
-        "total_cost": 2.6e-05
+        "total_cost": 8.5e-06
       },
       {
-        "input_cost": 2.6e-05,
+        "input_cost": 8.5e-06,
         "output_cost": 0.0,
-        "total_cost": 2.6e-05
+        "total_cost": 8.5e-06
       }
     ],
     "responses": [
@@ -97,6 +97,6 @@
       }
     ],
     "json_valid_count": 0,
-    "timestamp": "2026-11-01T13:21:58.062825"
+    "timestamp": "2026-11-01T16:36:27.654578"
   }
 }
