@@ -12,7 +12,7 @@ from dataclasses import dataclass, asdict
 import requests
 from openai import OpenAI
 
-from config import (
+from .config import (
     OPENAI_API_KEY, 
     MODEL_NAME, 
     ACADEMIC_QUESTIONS,
@@ -142,9 +142,21 @@ class LLMAPIClient:
             List[LatencyRecord]: List of latency records for all questions
         """
         records = []
-        prompt_template = PROMPTS[f"v{prompt_version}_basic" if prompt_version == "v1" 
-                                  else f"v{prompt_version}_structured" if prompt_version == "v2"
-                                  else f"v{prompt_version}_json"]["template"]
+        # Map prompt version names to actual keys
+        prompt_key_map = {
+            "v1_basic": "v1_basic",
+            "v2_structured": "v2_structured",
+            "v3_json": "v3_json",
+            "v1": "v1_basic",      # Allow short names too
+            "v2": "v2_structured",
+            "v3": "v3_json"
+        }
+        
+        if prompt_version not in prompt_key_map:
+            raise ValueError(f"Unknown prompt version: {prompt_version}. Available: {list(prompt_key_map.keys())}")
+        
+        prompt_key = prompt_key_map[prompt_version]
+        prompt_template = PROMPTS[prompt_key]["template"]
         
         for question in ACADEMIC_QUESTIONS:
             # Format prompt with the question

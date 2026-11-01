@@ -12,7 +12,7 @@ from datetime import datetime
 import mlflow
 from mlflow.entities import Metric
 
-from config import (
+from .config import (
     MLFLOW_EXPERIMENT_NAME,
     MLFLOW_TRACKING_URI,
     MLFLOW_ARTIFACT_ROOT,
@@ -20,8 +20,8 @@ from config import (
     ACADEMIC_QUESTIONS,
     MODEL_NAME
 )
-from latency import LLMAPIClient, LatencyRecord
-from cost import TokenCounter, CostCalculator, TokenUsage, CostCalculation
+from .latency import LLMAPIClient, LatencyRecord
+from .cost import TokenCounter, CostCalculator, TokenUsage, CostCalculation
 
 
 class PromptRegistry:
