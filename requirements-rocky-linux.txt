@@ -1,0 +1,37 @@
+# MLOps Assignment 2 - LLMOps: API Cost, Latency, and Prompt Version Management
+# Compatible versions for Rocky Linux (and all platforms)
+# Generated: 2026-11-01
+
+# Core dependencies
+python-dotenv>=1.0.0
+requests>=2.31.0
+pandas>=2.1.0
+numpy>=2.0.0
+
+# MLflow for experiment tracking and prompt management
+mlflow>=3.0.0
+
+# OpenAI API (for GPT models)
+openai>=1.0.0
+
+# Jupyter for notebook execution
+jupyter>=1.0.0
+ipython>=8.0.0
+
+# Utilities
+python-dateutil>=2.8.0
+pytz>=2023.0
+
+# For JSON validation
+jsonschema>=4.0.0
+
+# Optional: For visualization
+matplotlib>=3.5.0
+seaborn>=0.12.0
+
+# Type hints and validation
+pydantic>=2.0.0
+
+# Additional utilities
+scipy>=1.10.0
+scikit-learn>=1.0.0
