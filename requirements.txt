@@ -1,0 +1,32 @@
+# MLOps Assignment 2 - LLMOps: API Cost, Latency, and Prompt Version Management
+# Dependencies for calling LLM APIs, measuring performance, and managing prompts in MLflow
+
+# Core dependencies
+python-dotenv==1.0.0
+requests==2.31.0
+pandas==2.1.0
+numpy==1.24.3
+
+# MLflow for experiment tracking and prompt management
+mlflow==2.10.0
+
+# OpenAI API (for GPT models) or alternative LLM providers
+openai==1.3.0
+
+# Jupyter for notebook execution
+jupyter==1.0.0
+ipython==8.16.0
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+
+# For JSON validation
+jsonschema==4.19.0
+
+# Optional: For visualization
+matplotlib==3.8.0
+seaborn==0.13.0
+
+# Type hints and validation
+pydantic==2.4.0
